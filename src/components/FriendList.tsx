@@ -3,11 +3,11 @@ import Friends from "./Friends";
 
 const FriendList = () => {
   return (
-    <div className="bg-slate-700 h-screen w-64 flex flex-col">
+    <div className="bg-mid-dark h-screen w-64 flex flex-col">
       <input
-        className="text-sm m-3"
+        className="text-sm m-3 p-1 bg-dark-grey rounded"
         type="text"
-        placeholder="Search for a friend"
+        placeholder="Find or start a conversation"
       ></input>
       <div className="font-semibold text-gray-400 float-left ml-6 mb-4 mt-1 text-lg w-full">
         <h2>
@@ -21,8 +21,8 @@ const FriendList = () => {
       </div>
 
       <div className=" font-medium text-gray-400 flex flex-col mt-1 mb-1 m-auto text-base w-full text-center ">
-        <h2 className="inline-flex justify-evenly">
-          Direct Messages <h2>+</h2>
+        <h2 className="inline-flex ml-4">
+          Direct Messages <h2 className="ml-20">+</h2>
         </h2>
         {Friends &&
           Friends.map((item) => (
@@ -36,6 +36,18 @@ const FriendList = () => {
               </div>
             </div>
           ))}
+      </div>
+      <div className="w-full mt-auto inline-flex h-12 p-1  bg-dark-grey">
+        <img src="/chad.jpeg" className="w-10 rounded-full"></img>
+        <div className="">
+          <p className="ml-2 text-base text-white">Flips</p>
+          <p className="flex-col flex text-sm text-gray-400 ml-2"> #3018 </p>
+        </div>
+        <div className=" text-gray-400 ml-auto m-auto flex">
+          <i className="fa-solid fa-microphone ml-4"></i>
+          <i className="fa-solid fa-headphones ml-4"></i>
+          <i className="fa-solid fa-gear ml-4"></i>
+        </div>
       </div>
     </div>
   );
