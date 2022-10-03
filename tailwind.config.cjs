@@ -9,6 +9,15 @@ module.exports = {
         bgLight: "#F2F2F2",
         primaryDark: "#2B3844",
       },
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        "dark-grey": "#1e2124",
+        "strong-dark": "#282b30",
+        "mid-dark": "#36393e",
+        "light-dark": "#424549",
+        "discord-blue": "#7289da",
+      },
       animation: {
         // Bounces for a total of 5 seconds
         "bounce-short": "bounce 1s ease-in-out 5",
