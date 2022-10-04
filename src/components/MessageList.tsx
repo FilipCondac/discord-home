@@ -1,7 +1,7 @@
 import { createImageUri } from "../util";
-import Friends from "./Friends";
+import Messages from "./Messages";
 
-const FriendList = () => {
+const MessageList = () => {
   return (
     <div className="bg-mid-dark h-screen w-64 flex flex-col">
       <input
@@ -27,8 +27,8 @@ const FriendList = () => {
         <h2 className="inline-flex ml-4">
           Direct Messages <h2 className="ml-20">+</h2>
         </h2>
-        {Friends &&
-          Friends.map((item) => (
+        {Messages &&
+          Messages.map((item) => (
             <div key={item.id}>
               <div className="flex float-left ml-3">
                 <img
@@ -56,4 +56,4 @@ const FriendList = () => {
   );
 };
 
-export default FriendList;
+export default MessageList;

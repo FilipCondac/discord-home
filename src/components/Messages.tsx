@@ -1,4 +1,4 @@
-const Friends = [
+const Messages = [
   {
     id: 1,
     imgLocation: "/chad.jpeg",
@@ -21,4 +21,4 @@ const Friends = [
   },
 ];
 
-export default Friends;
+export default Messages;
