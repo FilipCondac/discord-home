@@ -9,15 +9,18 @@ const FriendList = () => {
         type="text"
         placeholder="Find or start a conversation"
       ></input>
-      <div className="font-semibold text-gray-400 float-left ml-6 mb-4 mt-1 text-lg w-full">
+      <div className="font-semibold text-gray-400 float-left ml-6 mb-4   mt-1 text-lg w-full">
         <h2>
-          {" "}
-          <i className="fa-solid fa-user-group mr-2"></i> Friends
+          <i className="fa-solid fa-user-group mr-2 mb-4"></i> Friends
         </h2>
-        <h2>
-          {" "}
-          <i className="fa-solid fa-bolt-lightning mr-5 ml-1"></i>Nitro
-        </h2>
+        <div className="flex">
+          <h2 className="flex-inline">
+            <i className="fa-solid fa-bolt-lightning mr-5 ml-1"></i>Nitro
+          </h2>
+          <p className="flex-inline text-sm ml-7 bg-gradient-to-r text-white rounded-xl p-1 from-cyan-500 to-blue-500">
+            1 MONTH FREE
+          </p>
+        </div>
       </div>
 
       <div className=" font-medium text-gray-400 flex flex-col mt-1 mb-1 m-auto text-base w-full text-center ">
@@ -27,7 +30,7 @@ const FriendList = () => {
         {Friends &&
           Friends.map((item) => (
             <div key={item.id}>
-              <div className="flex float-left ml-6">
+              <div className="flex float-left ml-3">
                 <img
                   src={createImageUri(item.imgLocation)}
                   className="w-12 h-12 m-auto mt-2 mr-3 rounded-full"
@@ -37,7 +40,7 @@ const FriendList = () => {
             </div>
           ))}
       </div>
-      <div className="w-full mt-auto inline-flex h-12 p-1  bg-dark-grey">
+      <div className="w-full mt-auto inline-flex h-12 p-1  bg-strong-dark">
         <img src="/chad.jpeg" className="w-10 rounded-full"></img>
         <div className="">
           <p className="ml-2 text-base text-white">Flips</p>
