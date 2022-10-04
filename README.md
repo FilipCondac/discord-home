@@ -1,7 +1,7 @@
-# React + Tailwind + Typescript + Vite Template 🧨
+# React + Tailwind + Typescript 🧨
 
-Does exactly what it says on the tin.
+Discord home page UI recreated by me
 
-Some fancy animations included in `tailwind.config.cjs`.
+This is just for practicing using this certain stack
 
 💩
