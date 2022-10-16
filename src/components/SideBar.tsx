@@ -1,7 +1,7 @@
 import ServerImages from "./ServerImages";
 const SideBar = () => {
   return (
-    <div className="bg-dark-grey w-16 h-screen left-0 flex flex-col">
+    <div className="bg-dark-grey w-16 overflow-auto left-0 flex flex-col">
       <div className="place-content-centre flex flex-col mt-6">
         <img
           src="/messageIcon.png"

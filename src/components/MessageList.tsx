@@ -3,7 +3,7 @@ import Messages from "./Messages";
 
 const MessageList = () => {
   return (
-    <div className="bg-mid-dark h-screen w-64 flex flex-col">
+    <div className="bg-mid-dark overflow-auto w-64 flex flex-col">
       <input
         className="text-sm m-3 p-1 bg-dark-grey rounded"
         type="text"
