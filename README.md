@@ -1,5 +1,6 @@
 <h1> # React + Tailwind + Typescript 🧨 </h1>
 
+<a href="https://discord-home-upgz.vercel.app/"><h2>Check out the development here via Vercel</h2>
 Discord home page UI recreated by me
 
 <h2>The reference I used for this project</h2>
