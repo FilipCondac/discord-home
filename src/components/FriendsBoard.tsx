@@ -8,10 +8,18 @@ const FriendsBoard = () => {
         <h2 className="flex-inline border-r-2 pr-2 border-gray-400">
           <i className="fa-solid fa-user-group mr-2 mb-4 "></i>Friends
         </h2>
-        <h2 className="flex-inline ml-4">Online</h2>
-        <h2 className="flex-inline ml-4">All</h2>
-        <h2 className="flex-inline ml-4">Pending</h2>
-        <h2 className="flex-inline ml-4">Blocked</h2>
+        <h2 className="flex-inline ml-4 pr-1 pl-1 hover:bg-gray-500 rounded">
+          Online
+        </h2>
+        <h2 className="flex-inline ml-4 pr-1 pl-1 hover:bg-gray-500 rounded">
+          All
+        </h2>
+        <h2 className="flex-inline ml-4 pr-1 pl-1 hover:bg-gray-500 rounded">
+          Pending
+        </h2>
+        <h2 className="flex-inline ml-4 pr-1 pl-1 hover:bg-gray-500 rounded">
+          Blocked
+        </h2>
         <h2 className="flex-inline ml-4 bg-green-500 text-white rounded-lg pl-1 pr-1">
           Add Friend
         </h2>

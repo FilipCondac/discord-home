@@ -1,9 +1,37 @@
+import { useState } from "react";
 import { createImageUri } from "../util";
-import Messages from "./Messages";
+
+const [messages, setMessages] = useState([
+  {
+    id: 1,
+    imgLocation: "/chad.jpeg",
+    friendName: "Gigachad",
+  },
+  {
+    id: 2,
+    imgLocation: "/chad2.jpeg",
+    friendName: "Gigachadimus",
+  },
+  {
+    id: 3,
+    imgLocation: "/chad3.jpeg",
+    friendName: "Gigabigachad",
+  },
+  {
+    id: 4,
+    imgLocation: "/chad4.jpeg",
+    friendName: "Gigacrab",
+  },
+]);
+
+const removeElement = (id: number) => {
+  const newList = messages.filter((l) => l.id !== id);
+  setMessages(newList);
+};
 
 const MessageList = () => {
   return (
-    <div className="bg-mid-dark overflow-y-hidden overflow-x-hidden w-64 h-screen min-w-min flex flex-col">
+    <div className="bg-mid-dark overflow-y-hidden overflow-x-hidden w-72 h-screen min-w-min flex flex-col">
       <input
         className="text-sm m-3 p-1 bg-dark-grey rounded"
         type="text"
@@ -23,22 +51,27 @@ const MessageList = () => {
         </div>
       </div>
 
-      <div className=" font-medium text-gray-400 flex flex-col mt-1 mb-1 m-auto text-base w-full text-center overflow-scroll h-screen">
+      <div className=" font-medium text-gray-400 flex flex-col m-1 ml-2  text-base w-11/12 text-center overflow-scroll h-screen">
         <h2 className="inline-flex ml-4">
           Direct Messages <h2 className="ml-20">+</h2>
         </h2>
-        {Messages &&
-          Messages.map((item) => (
-            <div key={item.id}>
-              <div className="flex float-left ml-3">
-                <img
-                  src={createImageUri(item.imgLocation)}
-                  className="w-12 h-12 m-auto mt-2 mr-3 rounded-full"
-                />
-                <p className="m-auto ml-0">{item.friendName}</p>
+        {Messages.map((item) => (
+          <div key={item.id} className="group">
+            <div className="flex  hover:bg-gray-500 rounded w-full">
+              <img
+                src={createImageUri(item.imgLocation)}
+                className="w-12 h-12 mt-2 mr-3  ml-3 rounded-full"
+              />
+              <p className="m-auto ml-1 flex w-32">{item.friendName}</p>
+              <div
+                className="hidden group-hover:block text-white m-auto "
+                onClick={() => removeElement(item.id)}
+              >
+                x
               </div>
             </div>
-          ))}
+          </div>
+        ))}
       </div>
       <div className="w-full mt-auto inline-flex h-12 p-1  bg-strong-dark">
         <img src="/chad.jpeg" className="w-10 rounded-full"></img>
