@@ -3,7 +3,7 @@ import Messages from "./Messages";
 
 const MessageList = () => {
   return (
-    <div className="bg-mid-dark overflow-auto w-64 flex flex-col">
+    <div className="bg-mid-dark overflow-y-hidden overflow-x-hidden w-64 h-screen min-w-min flex flex-col">
       <input
         className="text-sm m-3 p-1 bg-dark-grey rounded"
         type="text"
@@ -23,7 +23,7 @@ const MessageList = () => {
         </div>
       </div>
 
-      <div className=" font-medium text-gray-400 flex flex-col mt-1 mb-1 m-auto text-base w-full text-center ">
+      <div className=" font-medium text-gray-400 flex flex-col mt-1 mb-1 m-auto text-base w-full text-center overflow-scroll h-screen">
         <h2 className="inline-flex ml-4">
           Direct Messages <h2 className="ml-20">+</h2>
         </h2>

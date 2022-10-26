@@ -3,7 +3,7 @@ import { createImageUri } from "../util";
 
 const FriendsBoard = () => {
   return (
-    <div className="bg-light-dark w-1/2 min-w-min m-0 flex-col">
+    <div className="bg-light-dark w-1/2 min-w-min m-0 flex-col h-screen overflow-hidden">
       <div className="flex font-semibold text-lg text-gray-300 ml-6 mt-2 h-8 ">
         <h2 className="flex-inline border-r-2 pr-2 border-gray-400">
           <i className="fa-solid fa-user-group mr-2 mb-4 "></i>Friends
@@ -28,7 +28,7 @@ const FriendsBoard = () => {
           Online - 4
         </h2>
       </div>
-      <div className=" flex-col float-left min-w-full">
+      <div className=" flex-col float-left min-w-full h-screen overflow-scroll">
         {Messages &&
           Messages.map((item) => (
             <div key={item.id}>
